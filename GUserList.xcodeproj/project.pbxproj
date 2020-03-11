@@ -3,12 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		28DE856BC3F602ECFF0DCB3F /* Pods_GUserList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D2BC16C452E0E95740359A /* Pods_GUserList.framework */; };
 		960FEC45B32111F32D5401F7 /* Pods_GUserListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C9D82E165FC936B93A50EC /* Pods_GUserListTests.framework */; };
+		B602A29D2418D83A00BB71CA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B602A29C2418D83A00BB71CA /* WebService.swift */; };
+		B66A1093241929C0001A392C /* GHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A1092241929C0001A392C /* GHUser.swift */; };
+		B69B04D5241936F7003785F5 /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B04D4241936F7003785F5 /* ViewControllerViewModel.swift */; };
+		B69B04D7241939E8003785F5 /* UserListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B04D6241939E8003785F5 /* UserListCellViewModel.swift */; };
+		B69B04DA24193A63003785F5 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B04D924193A63003785F5 /* UserListCell.swift */; };
+		B69B04DD24193C9C003785F5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B04DC24193C9C003785F5 /* CardView.swift */; };
 		B6F269B52418BD230003190A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F269B42418BD230003190A /* AppDelegate.swift */; };
 		B6F269B72418BD230003190A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F269B62418BD230003190A /* SceneDelegate.swift */; };
 		B6F269B92418BD230003190A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F269B82418BD230003190A /* ViewController.swift */; };
@@ -46,6 +52,12 @@
 		9637A47199EF333CCE7D4D0A /* Pods-GUserList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUserList.release.xcconfig"; path = "Target Support Files/Pods-GUserList/Pods-GUserList.release.xcconfig"; sourceTree = "<group>"; };
 		97E3CC5C2B6DF509977D0B99 /* Pods-GUserList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUserList.debug.xcconfig"; path = "Target Support Files/Pods-GUserList/Pods-GUserList.debug.xcconfig"; sourceTree = "<group>"; };
 		ACD1DE8EC160F23F0F27F607 /* Pods_GUserList_GUserListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GUserList_GUserListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B602A29C2418D83A00BB71CA /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		B66A1092241929C0001A392C /* GHUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHUser.swift; sourceTree = "<group>"; };
+		B69B04D4241936F7003785F5 /* ViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModel.swift; sourceTree = "<group>"; };
+		B69B04D6241939E8003785F5 /* UserListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCellViewModel.swift; sourceTree = "<group>"; };
+		B69B04D924193A63003785F5 /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
+		B69B04DC24193C9C003785F5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B6F269B12418BD230003190A /* GUserList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUserList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F269B42418BD230003190A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F269B62418BD230003190A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +113,6 @@
 				6D67EC0E03ABDAE2CFADDAE0 /* Pods-GUserListTests.debug.xcconfig */,
 				FE334C632C22252C91533019 /* Pods-GUserListTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -113,6 +124,64 @@
 				05C9D82E165FC936B93A50EC /* Pods_GUserListTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B602A29A2418D7C400BB71CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6F269B82418BD230003190A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B602A29B2418D80200BB71CA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B602A29C2418D83A00BB71CA /* WebService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B66A10912419298C001A392C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B66A1092241929C0001A392C /* GHUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B66A1094241935B9001A392C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B69B04D924193A63003785F5 /* UserListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B66A1095241935F7001A392C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B69B04D4241936F7003785F5 /* ViewControllerViewModel.swift */,
+				B69B04D6241939E8003785F5 /* UserListCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B69B04D824193A2C003785F5 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B6F269BA2418BD230003190A /* Main.storyboard */,
+				B6F269BF2418BD2A0003190A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B69B04DB24193C4C003785F5 /* UIStyle */ = {
+			isa = PBXGroup;
+			children = (
+				B69B04DC24193C9C003785F5 /* CardView.swift */,
+			);
+			path = UIStyle;
 			sourceTree = "<group>";
 		};
 		B6F269A82418BD230003190A = {
@@ -140,12 +209,16 @@
 		B6F269B32418BD230003190A /* GUserList */ = {
 			isa = PBXGroup;
 			children = (
+				B69B04DB24193C4C003785F5 /* UIStyle */,
+				B69B04D824193A2C003785F5 /* Storyboard */,
+				B602A29B2418D80200BB71CA /* Service */,
+				B66A1094241935B9001A392C /* View */,
+				B66A10912419298C001A392C /* Model */,
+				B66A1095241935F7001A392C /* ViewModel */,
+				B602A29A2418D7C400BB71CA /* Controller */,
 				B6F269B42418BD230003190A /* AppDelegate.swift */,
 				B6F269B62418BD230003190A /* SceneDelegate.swift */,
-				B6F269B82418BD230003190A /* ViewController.swift */,
-				B6F269BA2418BD230003190A /* Main.storyboard */,
 				B6F269BD2418BD290003190A /* Assets.xcassets */,
-				B6F269BF2418BD2A0003190A /* LaunchScreen.storyboard */,
 				B6F269C22418BD2A0003190A /* Info.plist */,
 			);
 			path = GUserList;
@@ -408,9 +481,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69B04DA24193A63003785F5 /* UserListCell.swift in Sources */,
+				B69B04DD24193C9C003785F5 /* CardView.swift in Sources */,
 				B6F269B92418BD230003190A /* ViewController.swift in Sources */,
 				B6F269B52418BD230003190A /* AppDelegate.swift in Sources */,
+				B602A29D2418D83A00BB71CA /* WebService.swift in Sources */,
+				B66A1093241929C0001A392C /* GHUser.swift in Sources */,
+				B69B04D5241936F7003785F5 /* ViewControllerViewModel.swift in Sources */,
 				B6F269B72418BD230003190A /* SceneDelegate.swift in Sources */,
+				B69B04D7241939E8003785F5 /* UserListCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
