@@ -45,5 +45,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        let listCellViewModel = viewModel.listCellViewModels[indexPath.row]
+        guard let login = listCellViewModel.login else {
+            return
+        }
+        let detailPage = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailPage.viewModel.login = login
+        self.present(detailPage, animated: true, completion: nil)
+        
+        
+    }
+    
 }
 

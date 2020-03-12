@@ -15,7 +15,7 @@ class ViewControllerViewModel {
     var listCellViewModels: [UserListCellViewModel] = []
     
     public func prepareRequest() {
-        moyaProvider.request(.users(since: 0, per_page: 100)) { (result) in
+        moyaProvider.request(.users(since: 4726790, per_page: 100)) { (result) in
             switch result {
                
             case .success(let response):

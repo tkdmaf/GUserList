@@ -13,5 +13,10 @@ struct GHUser: Decodable {
     var login: String?
     var id: Int?
     var avatar_url: String?
+    var name: String?
+    var bio: String?
+    var location: String?
+    var blog: String?
+    
 
 }

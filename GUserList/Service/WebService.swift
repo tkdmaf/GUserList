@@ -17,6 +17,8 @@ enum WebService {
     
     case users(since:Int, per_page: Int)
     
+    case user(login: String)
+    
 }
 
 extension WebService: TargetType {
@@ -30,20 +32,23 @@ extension WebService: TargetType {
         case .listUser:
             return "/users"
             
-        case .users(_,_):
+        case .users:
             return "/users"
+            
+        case .user(let login):
+            return "/users/\(login)"
         
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .listUser:
-            return .get
             
-        case .users(_,_):
-            return .get
+        default:
+               return .get
         }
+        
+       
     }
     
     var sampleData: Data {
@@ -57,6 +62,9 @@ extension WebService: TargetType {
         case .users(let since,let per_page):
             
             return .requestParameters(parameters: ["since":since,"per_page":per_page], encoding: URLEncoding.default)
+            
+        case .user:
+            return .requestPlain
         }
     }
     
