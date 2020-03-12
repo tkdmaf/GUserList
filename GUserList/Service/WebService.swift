@@ -9,7 +9,8 @@
 import Foundation
 import Moya
 
-let moyaProvider = MoyaProvider<WebService>(plugins: [NetworkLoggerPlugin(verbose:true)])
+//let moyaProvider = MoyaProvider<WebService>(plugins: [NetworkLoggerPlugin(verbose:true)])
+let moyaProvider = MoyaProvider<WebService>()
 
 enum WebService {
     
