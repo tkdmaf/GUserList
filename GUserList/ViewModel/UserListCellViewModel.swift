@@ -12,6 +12,7 @@ class UserListCellViewModel {
     
     var avatar_url: String?
     var login: String?
+    var cellIdentifier: String!
     
     private let downloadImageQueue = OperationQueue()
     

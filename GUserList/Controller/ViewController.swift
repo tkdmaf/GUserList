@@ -39,8 +39,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UserListCell = tableView.dequeueReusableCell(withIdentifier: "UserListCell", for: indexPath) as! UserListCell
         let listCellViewModel = viewModel.listCellViewModels[indexPath.row]
+        let cell: UserListCell = tableView.dequeueReusableCell(withIdentifier: listCellViewModel.cellIdentifier, for: indexPath) as! UserListCell
         cell.setup(viewModel: listCellViewModel)
         return cell
     }

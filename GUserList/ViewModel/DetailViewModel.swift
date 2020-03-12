@@ -39,8 +39,15 @@ class DetailViewModel {
         guard let vc = self.vc else {
             return
         }
+        let isUser = (user.type == "User")
+        
+        vc.login.isHidden = !isUser
+        vc.adminLogin.isHidden = isUser
+        vc.staffImage.isHidden = isUser
+        
         vc.fullName.text = user.name
         vc.login.text = user.login
+        vc.adminLogin.text = user.login
         vc.bio.text = user.bio
         vc.city.text = user.location
         vc.link.text = user.blog

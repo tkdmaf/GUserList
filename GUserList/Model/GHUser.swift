@@ -17,6 +17,7 @@ struct GHUser: Decodable {
     var bio: String?
     var location: String?
     var blog: String?
+    var type: String?
     
 
 }

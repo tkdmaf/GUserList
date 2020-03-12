@@ -13,10 +13,13 @@ class DetailViewController: UIViewController {
     
     @IBOutlet var headerImage: UIImageView!
     @IBOutlet var fullName: UILabel!
+    @IBOutlet var adminLogin: UILabel!
     @IBOutlet var bio: UILabel!
     @IBOutlet var login: UILabel!
     @IBOutlet var city: UILabel!
     @IBOutlet var link: UILabel!
+    
+    @IBOutlet var staffImage: UILabel!
     
 
     let viewModel: DetailViewModel = DetailViewModel()

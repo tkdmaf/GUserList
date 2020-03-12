@@ -33,9 +33,11 @@ class ViewControllerViewModel {
     
     private func convertUserToViewModel(users: [GHUser]) {
         for user in users {
+            let cellIdentifier = (user.type == "User") ? "UserListCell" : "AdminUserListCell"
             let listCellViewModel = UserListCellViewModel()
             listCellViewModel.avatar_url = user.avatar_url
             listCellViewModel.login = user.login
+            listCellViewModel.cellIdentifier = cellIdentifier
             listCellViewModels.append(listCellViewModel)
         }
         onRequestEnd?()
